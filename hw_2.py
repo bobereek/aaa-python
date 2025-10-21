@@ -54,9 +54,9 @@ def make_report(data: list):
         else:
             report_data[depart] = {
                 "count": 1,
-                "min_salary": float("inf"),
-                "max_salary": 0,
-                "total_salary": 0,
+                "min_salary": int(row[5]),
+                "max_salary": int(row[5]),
+                "total_salary": int(row[5]),
             }
 
     return report_data
@@ -69,11 +69,10 @@ def print_report(data: list):
     Функция вызывает функцию для создания отчета по входным данным и выводит его в консоль.
     """
     report_data = make_report(data)
-
+    print("Департамент,Численность,Мин.Зарплата,Макс.Зарплата,Средняя Зарплата")
     for depart in report_data:
         print(
-            f"""Департамент: {depart}
-            \t Численность: {report_data[depart]["count"]}, Вилка: {report_data[depart]["min_salary"]} - {report_data[depart]["max_salary"]}, Средняя зарплата: {report_data[depart]["total_salary"] / report_data[depart]["count"]}"""
+            f"{depart},{report_data[depart]["count"]},{report_data[depart]["min_salary"]},{report_data[depart]["max_salary"]},{report_data[depart]["total_salary"] / report_data[depart]["count"]}"
         )
 
 
@@ -88,10 +87,12 @@ def save_report(data: list):
     report_data = make_report(data)
 
     with open(path, mode="w", encoding="utf-8") as file:
+        file.write(
+            "Департамент,Численность,Мин.Зарплата,Макс.Зарплата,Средняя Зарплата\n"
+        )
         for depart in report_data:
             file.write(
-                f"""Департамент: {depart}
-                \t Численность: {report_data[depart]["count"]}, Вилка: {report_data[depart]["min_salary"]} - {report_data[depart]["max_salary"]}, Средняя зарплата: {round(report_data[depart]["total_salary"] / report_data[depart]["count"], 2)}\n"""
+                f"{depart},{report_data[depart]["count"]},{report_data[depart]["min_salary"]},{report_data[depart]["max_salary"]},{report_data[depart]["total_salary"] / report_data[depart]["count"]}\n"
             )
 
 
@@ -106,6 +107,7 @@ def show_menu():
     print("2. Вывести сводный отчёт по департаментам")
     print("3. Сохранить сводный отчёт")
     print("0. Выход")
+    print()
 
 
 def menu(data: list):
@@ -115,20 +117,19 @@ def menu(data: list):
     На вход получает список data, который после передает в функции для обработки.
     """
     show_menu()
-    command = int(input())
+    command = input()
 
-    while command not in [0, 1, 2, 3]:
-        command = int(input())
-        print("Некорректный ввод, повторите попытку")
-    while command != 0:
-        if command == 1:
+    while command != "0":
+        if command == "1":
             print_hierarchy(data)
-        elif command == 2:
+        elif command == "2":
             print_report(data)
-        elif command == 3:
+        elif command == "3":
             save_report(data)
+        else:
+            print("\nНекорректный ввод, повторите попытку")
         show_menu()
-        command = int(input())
+        command = input()
     return
 
 
