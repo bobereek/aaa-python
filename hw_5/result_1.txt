@@ -1,0 +1,31 @@
+Trying:
+    encode('SOS')
+Expecting:
+    '... --- ...'
+ok
+Trying:
+    encode('HELLO')
+Expecting:
+    '.... . .-.. .-.. ---'
+ok
+Trying:
+    encode(1)
+Expecting:
+    Traceback (most recent call last):
+        ...
+    TypeError: 'int' object is not iterable
+ok
+Trying:
+    encode('Hello')
+Expecting:
+    Traceback (most recent call last):
+        ...
+    KeyError: 'e'
+ok
+1 item had no tests:
+    issue_1
+1 item passed all tests:
+   4 tests in issue_1.encode
+4 tests in 2 items.
+4 passed.
+Test passed.
