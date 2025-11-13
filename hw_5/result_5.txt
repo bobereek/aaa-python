@@ -1,0 +1,10 @@
+test_dmy_format (issue_5.TestWhatIsYearNow.test_dmy_format) ... ok
+test_invalid_format (issue_5.TestWhatIsYearNow.test_invalid_format) ... ok
+test_missing_field (issue_5.TestWhatIsYearNow.test_missing_field) ... ok
+test_network_error (issue_5.TestWhatIsYearNow.test_network_error) ... ok
+test_ymd_format (issue_5.TestWhatIsYearNow.test_ymd_format) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.004s
+
+OK

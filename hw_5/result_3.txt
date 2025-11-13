@@ -1,0 +1,11 @@
+test_basic (issue_3.test_fit_tranform.test_basic) ... ok
+test_duplicates (issue_3.test_fit_tranform.test_duplicates) ... ok
+test_empty (issue_3.test_fit_tranform.test_empty) ... ok
+test_exception_no_args (issue_3.test_fit_tranform.test_exception_no_args) ... ok
+test_single_element (issue_3.test_fit_tranform.test_single_element) ... ok
+test_string_input (issue_3.test_fit_tranform.test_string_input) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+OK
