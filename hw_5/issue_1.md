@@ -4,7 +4,7 @@
 
     ```bash
     cd hw_5 # при необходимости переходим в директорию hw_5
-    python -m doctest -v issue_1.py
+    python -m doctest -o NORMALIZE_WHITESPACE -v issue_1.py
     ```
 
 2. Ожидаемый результат

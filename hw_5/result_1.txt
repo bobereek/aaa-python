@@ -12,14 +12,14 @@ Trying:
     encode(1)
 Expecting:
     Traceback (most recent call last):
-        ...
+    # doctest: +IGNORE_EXCEPTION_DETAIL
     TypeError: 'int' object is not iterable
 ok
 Trying:
     encode('Hello')
 Expecting:
     Traceback (most recent call last):
-        ...
+    # doctest: +IGNORE_EXCEPTION_DETAIL
     KeyError: 'e'
 ok
 1 item had no tests:

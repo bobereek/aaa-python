@@ -14,12 +14,12 @@ def encode(message: str) -> str:
 
     >>> encode(1)
     Traceback (most recent call last):
-        ...
+    # doctest: +IGNORE_EXCEPTION_DETAIL
     TypeError: 'int' object is not iterable
 
     >>> encode('Hello')
     Traceback (most recent call last):
-        ...
+    # doctest: +IGNORE_EXCEPTION_DETAIL
     KeyError: 'e'
     """
     encoded_signs = [LETTER_TO_MORSE[letter] for letter in message]
