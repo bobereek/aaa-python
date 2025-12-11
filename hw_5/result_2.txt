@@ -1,0 +1,15 @@
+====================================================================== test session starts ======================================================================
+platform win32 -- Python 3.13.9, pytest-8.4.2, pluggy-1.6.0 -- C:\Users\qqml\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\qqml\AAA\python\hw_5
+plugins: anyio-4.11.0
+collected 6 items
+
+issue_2.py::test_decode[... --- ...-SOS] PASSED                                                                                                            [ 16%]
+issue_2.py::test_decode[.... . .-.. .-.. ----HELLO] PASSED                                                                                                 [ 33%]
+issue_2.py::test_decode[.-- --- .-. .-.. -..-WORLD] PASSED                                                                                                 [ 50%]
+issue_2.py::test_decode[.- .- .--AAA] PASSED                                                                                                               [ 66%]
+issue_2.py::test_decode[-] PASSED                                                                                                                          [ 83%]
+issue_2.py::test_decode[.--A] PASSED                                                                                                                       [100%]
+
+======================================================================= 6 passed in 0.07s =======================================================================
